@@ -13,7 +13,7 @@ export async function strategy(provider, addresses, options, snapshot) {
   return Object.fromEntries(
     response.map((value, i) => [
       addresses[i],
-      parseFloat(formatUnits(value.toString(), options.decimals))
+      parseFloat(value.toString())
     ])
   );
 }
